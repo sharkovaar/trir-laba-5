@@ -1,0 +1,190 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8; 
+    margin: 0;
+    padding: 25px;
+    color: #334e68; 
+}
+
+.student-header {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    margin-bottom: 25px;
+    border-left: 5px solid #243b53; 
+    font-size: 30px
+}
+.student-header h1 {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+    color: #102a43;
+    letter-spacing: -0.5px;
+}
+.student-info {
+    display: flex;
+    gap: 30px; 
+    flex-wrap: wrap;
+}
+.student-info p {
+    margin: 0;
+    font-size: 15px;
+    color: #486581;
+}
+.student-info strong {
+    color: #102a43;
+}
+
+.config-panel {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+.config-panel h2 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: #102a43;
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #486581;
+}
+
+input[type="number"] {
+    padding: 10px 14px;
+    width: 110px;
+    border: 2px solid #d9e2ec;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #102a43;
+    font-weight: 600;
+    outline: none;
+    transition: border-color 0.2s;
+}
+input[type="number"]:focus {
+    border-color: #627d98; 
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+button:active {
+    transform: translateY(1px); 
+}
+button:disabled {
+    background-color: #bcccdc !important;
+    color: #627d98 !important;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Кастомная палитра кнопок */
+#btn-start { 
+    background-color: #1b5e20; 
+    color: #ffffff; 
+}
+#btn-start:hover { background-color: #144517; }
+
+#btn-stop { 
+    background-color: #b71c1c; 
+    color: #ffffff; 
+}
+#btn-stop:hover { background-color: #881414; }
+
+#btn-clear { 
+    background-color: #486581; 
+    color: #ffffff; 
+}
+#btn-clear:hover { background-color: #334e68; }
+
+.animation-container {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    background-color: #ffffff;
+    border: 3px solid #102a43;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: inset 0 4px 12px rgba(16, 42, 67, 0.08);
+}
+
+.bin {
+    position: absolute;
+    bottom: 25px;
+    width: 160px;
+    height: 130px;
+    border: 3px dashed;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    background-color: rgba(240, 244, 248, 0.85);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+    z-index: 10;
+    transition: transform 0.2s;
+}
+.bin:hover {
+    transform: scale(1.03);
+}
+
+.black-bin { 
+    border-color: #102a43; 
+    left: 45px; 
+    color: #102a43; 
+}
+.red-bin { 
+    border-color: #b71c1c; 
+    right: 45px; 
+    color: #b71c1c; 
+}
+
+.bin-title { 
+    font-size: 13px; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px;
+    margin-bottom: 8px; 
+    opacity: 0.8;
+}
+.counter { 
+    font-size: 32px; 
+    font-variant-numeric: tabular-nums; 
+}
+
+/* Динамические фигуры */
+.spawned-shape {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    cursor: grab;
+    z-index: 5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+.spawned-shape:active { 
+    cursor: grabbing; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Формы на основе классов */
+.shape-circle { border-radius: 50%; }
+.shape-square { border-radius: 6px; }

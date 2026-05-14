@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--Шаркова Арина 25ВП1 ЛР5 Вариант 27-->
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа №5 - Вариант 27</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <header class="student-header">
+        <h1>Лабораторная работа №5: JavaScript & jQuery</h1>
+        <div class="student-info">
+            <p><strong>Шаркова Арина</strong></p>
+            <p><strong>25ВП1</strong></p>
+            <p><strong>Вариант 27</strong></p><br>
+            <p><strong>
+                    На экране через фиксированный интервал времени появляются 
+                    красные и черные фигуры. Также на экране располагается 
+                    черный прямоугольный контейнер со счетчиком для хранения 
+                    черных фигур и красный контейнер со счетчиком для хранения 
+                    красных. Реализовать функцию перетаскивания фигур и 
+                    организовать корректную работу счетчиков 
+                    подсчитывающих количество соответствующих фигур в контейнерах. 
+                </strong></p>
+        </div>
+    </header>
+
+    <section class="config-panel">
+        <h2>Панель управления</h2>
+        <div class="form-group">
+            <label for="spawn-interval">Интервал появления фигур (в мс):</label>
+            <input type="number" id="spawn-interval" value="2000" min="0" step="100">
+            <button id="btn-start">Запустить генерацию</button>
+            <button id="btn-stop" disabled>Остановить</button>
+            <button id="btn-clear">Очистить</button>
+        </div>
+    </section>
+
+    <main class="animation-container" id="game-zone">
+        
+        <div class="bin black-bin" id="bin-black" data-color="black">
+            <span class="bin-title">Черные фигуры</span>
+            <div class="counter" id="counter-black">0</div>
+        </div>
+
+        <!-- Контейнер для красных фигур -->
+        <div class="bin red-bin" id="bin-red" data-color="red">
+            <span class="bin-title">Красные фигуры</span>
+            <div class="counter" id="counter-red">0</div>
+        </div>
+
+    </main>
+
+</body>
+</html>
